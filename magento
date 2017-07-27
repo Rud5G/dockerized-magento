@@ -176,7 +176,7 @@ enter() {
 destroy() {
     $DOCKERCOMPOSE stop
     $DOCKERCOMPOSE rm --force
-    rm -rf $PROJECTPATH/web $PROJECTPATH/db $PROJECTPATH/vendor
+    sudo rm -rf $PROJECTPATH/web $PROJECTPATH/db $PROJECTPATH/vendor
 }
 
 case "$action" in
