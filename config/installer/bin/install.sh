@@ -3,6 +3,19 @@
 set -e
 
 #####################################
+# Run the Magento Update scripts
+# Arguments:
+#   None
+# Returns:
+#   None
+#####################################
+function applyUpdatesMagento() {
+    chmod +x "${MAGENTO_ROOT}/run-apply-updates.sh"
+    ${MAGENTO_ROOT}/run-apply-updates.sh
+}
+
+
+#####################################
 # Update the Magento Installation
 # Arguments:
 #   None
@@ -143,6 +156,9 @@ magerun --skip-root-check --root-dir="$MAGENTO_ROOT" cache:enable fpc
 
 echo "Fixing filesystem permissions"
 fixFilesystemPermissions
+
+echo "Execute Apply-Updates"
+applyUpdatesMagento
 
 echo "Installation fininished"
 printLogonInformation

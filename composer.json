@@ -10,10 +10,11 @@
     "aschroder/smtp_pro": "^2",
     "gordonlesti/lesti_fpc": "^1",
     "jeroenvermeulen/solarium": "v1.6.9-beta",
-    "aydin-hassan/magento-core-composer-installer": "*",
-    "colinmollenhour/modman": "*",
-    "theseer/autoload": "*",
-    "magento/core": "^1.9"
+    "aydin-hassan/magento-core-composer-installer": "^1.4.0",
+    "colinmollenhour/modman": "^1.12",
+    "theseer/autoload": "^1.24.1",
+    "magento/core": "^1.9",
+    "tnetdev/magento-apply-updates": "*"
   },
   "require-dev": {
     "aoepeople/aoe_profiler": "v0.3.0",
@@ -23,6 +24,10 @@
     {
       "type": "composer",
       "url": "https://packages.firegento.com"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/Rud5G/TnetDev_ApplyUpdates"
     }
   ],
   "extra": {
